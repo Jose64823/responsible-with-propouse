@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario de Tareas - Colegio Bilingüe Ciudad Montes</title>
+  <link rel="stylesheet" href="./Styles/calendario.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="Logo Colegio">
+      <p>Colegio Bilingüe Ciudad Montes</p>
+    </div>
+
+    <nav class="nav-header">
+      <ul class="ul-header">
+        <li><a href="index.html">Mentorías</a></li>
+        <li><a href="#" class="active">Calendario</a></li>
+        <li><a href="#">Inicio de Sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="sobre-la-pagina">
+    <div class="acerca-de">
+      <h1>Calendario de Tareas</h1>
+      <p>Visualiza y organiza todas las fechas de entrega de tus tareas de mentorías en un solo lugar.</p>
+    </div>
+  </section>
+
+  <main class="calendario-container">
+    <div class="calendario-controls">
+      <button id="prev-month" class="btn-control">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      
+      <div class="mes-info">
+        <h2 id="mes-actual">Febrero 2025</h2>
+        <button id="hoy-btn" class="btn-hoy">Hoy</button>
+      </div>
+      
+      <button id="next-month" class="btn-control">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <div class="calendario-grid">
+      <div class="dias-semana">
+        <div class="dia-semana">Dom</div>
+        <div class="dia-semana">Lun</div>
+        <div class="dia-semana">Mar</div>
+        <div class="dia-semana">Mié</div>
+        <div class="dia-semana">Jue</div>
+        <div class="dia-semana">Vie</div>
+        <div class="dia-semana">Sáb</div>
+      </div>
+      
+      <div class="dias-mes" id="dias-mes">
+        <!-- Los días se generan dinámicamente con JavaScript -->
+      </div>
+    </div>
+
+    <div class="tareas-pendientes">
+      <h3>Tareas Próximas</h3>
+      <div class="lista-tareas" id="lista-tareas">
+        <!-- Las tareas próximas se generan dinámicamente -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal para detalles de tarea -->
+  <div id="modal-tarea" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-titulo-tarea"></h2>
+      <div class="info-tarea">
+        <p><strong>Mentoría:</strong> <span id="modal-mentoria"></span></p>
+        <p><strong>Fecha de entrega:</strong> <span id="modal-fecha"></span></p>
+        <p><strong>Estado:</strong> <span id="modal-estado"></span></p>
+      </div>
+      <div class="descripcion-tarea">
+        <h3>Descripción:</h3>
+        <p id="modal-descripcion"></p>
+      </div>
+      <div class="modal-actions">
+        <button class="btn-completar" id="btn-completar">Marcar como Completada</button>
+        <button class="btn-cerrar" id="btn-cerrar">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Colegio Bilingüe Ciudad Montes - Todos los derechos reservados</p>
+      <div class="footer-links">
+        <a href="index.html">Volver a Mentorías</a>
+        <a href="#">Contacto</a>
+        <a href="#">Política de Privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./Js/calendario.js"></script>
+</body>
+</html>

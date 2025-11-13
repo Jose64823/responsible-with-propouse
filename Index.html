@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentorías - Colegio Bilingüe Ciudad Montes</title>
+  <link rel="stylesheet" href="./Styles/index.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="Logo Colegio">
+      <p>Colegio Bilingüe Ciudad Montes</p>
+    </div>
+
+    <nav class="nav-header">
+      <ul class="ul-header">
+        <li><a href="./calendario.html">Calendario</a></li>
+        <li><a href="#">Inicio de Sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="sobre-la-pagina">
+    <div class="acerca-de">
+      <h1>Bienvenidos</h1>
+      <p>Esta página está dedicada a organizar y visualizar las mentorías disponibles para los estudiantes que
+        necesiten apoyo académico.</p>
+    </div>
+  </section>
+
+  <section class="buscador">
+    <input type="text" id="searchInput" placeholder="Buscar mentoría o materia...">
+    <select id="filterMentor">
+      <option value="all">Todos los mentores</option>
+    </select>
+  </section>
+
+  <section class="pendientes">
+    <div class="pendientes-titulo">
+      <h1>Pendientes</h1>
+      <p>En esta seccion podras ver las tutorias que tienes pendientes y con que profesores las tienes.</p>
+    </div>
+
+    <div class="container-cards" id="cards-container">
+      <!-- Cards generadas dinámicamente -->
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Colegio Bilingüe Ciudad Montes - Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-title"></h2>
+      <img id="modal-img" alt="">
+      <p id="modal-description"></p>
+      <p><strong>Mentor:</strong> <span id="modal-mentor"></span></p>
+      <button id="modal-btn">Inscribirme</button>
+    </div>
+  </div>
+
+  <script src="./Js/main.js"></script>
+</body>
+
+</html>
